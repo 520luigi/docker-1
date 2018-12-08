@@ -3,5 +3,4 @@
 #You will also make sure that the database is stored in the hatchery volume, that
 #the container directly creates a database named zerglings, and that the container 
 #itself is named spawning-pool.
-docker run -d --restart on-failure --mount type=volume,source=hatchery,destination=/etc/mysql \
---env MYSQL_DATABASE="zerglings" --env MYSQL_ROOT_PASSWORD=Kerrigan --name spawning-pool mysql 
+docker run -d --restart on-failure -v hatchery:/var/lib/mysql --env MYSQL_DATABASE="zerglings" --env MYSQL_ROOT_PASSWORD=Kerrigan --name spawning-pool mysql 
