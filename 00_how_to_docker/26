@@ -1,0 +1,7 @@
+#Launch a 42school/engineering-bay service in two replicas and make sure that
+#the service works properly. This service will be named engineering-bay and
+#will be on the overmind network.
+
+docker service create -d --name engineering-bay --env OC_USERNAME=user --env OC_PASSWD=password --network overmind --replicas 2 42school/engineering-bay
+
+#Same approach as problem 24, and also use the docker service ls to check
