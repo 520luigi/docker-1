@@ -3,7 +3,9 @@
 #machine, and it should be able to use the spawning-pool container as a database
 #service. You can try to access lair on your machine via a web browser, with the IP
 #address of the virtual machine as a URL.
+
 docker pull wordpress
 docker run -d -p 8080:80 --link spawning-pool:db --name lair wordpress
+
 #using the link 'spawning-pool:mysql' breaks and make the site unaccessibly on my
 #url, but using db (database) for short works...or not even using link works too

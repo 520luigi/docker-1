@@ -3,9 +3,11 @@
 #course, make sure before that the package manager and the packages already in the
 #container are updated). For this exercise, you should only specify the commands
 #to be run directly in the container.
+
 apt-get update -y
 apt-get install -y gcc
 apt-get install -y git
+
 #to open the debian container, it's similar to last one of opening an alpine one
 #use: docker run -it --rm debian bin/sh
 #then we can run the above codes inside the container and it would work nicely

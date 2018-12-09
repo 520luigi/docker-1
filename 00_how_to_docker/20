@@ -1,0 +1,6 @@
+#Create a local swarm, the Char virtual machine should be its manager.
+
+docker swarm init --advertise-addr $(docker-machine ip Char)
+
+#use docker node ls to check, also always use port 2377 for docker 
+#swarm, or no port at all and let it take the default.

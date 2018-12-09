@@ -1,3 +1,5 @@
 #Display all the currently active containers on the Char virtual machine.
+
 docker ps
+
 #can also use: docker container ls
