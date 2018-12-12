@@ -11,7 +11,7 @@ WORKDIR /go/src/app
 VOLUME ["/go/src/app"]
 
 #to build: docker build -t [name] .
-#to run : docker run -it [name] bin/sh 
+#to run : docker run -it [name] /bin/sh
 #in the new terminal make a go file. Add the codes:
 
 #package main
